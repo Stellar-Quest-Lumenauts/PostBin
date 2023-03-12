@@ -10,13 +10,11 @@ __version__ = "2.0.2a"
 
 _HEADERS = {"User-Agent": f"PostBin (https://github.com/dragdev-studios/postbin)/{__version__})"}
 _FALLBACKS = [
-    "https://haste.clicksminuteper.net",
     "https://hastebin.com",
     "https://mystb.in",
     "https://paste.pythondiscord.com",
     "https://haste.unbelievaboat.com",
     "https://hst.sh",
-    "https://hasteb.in"
 ]
 
 
