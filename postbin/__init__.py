@@ -148,7 +148,7 @@ def postSync(content:  str, *, url: str = None, retry: int = 5, find_fallback_on
         raise RuntimeError("requests must be installed if you want to be able to run postSync.")
     if not isinstance(content, str):
         content = repr(content)
-    url = url or "https://haste.clicksminuteper.net"
+    url = url or "https://hastebin.com"
     with requests.Session() as session:
         try:
             response = session.post(url+"/documents", data=content)
@@ -186,7 +186,7 @@ async def postAsync(content: str, *, url: str = None, retry: int = 5, find_fallb
         raise RuntimeError("aiohttp must be installed if you want to be able to run postAsync.")
     if not isinstance(content, str):
         content = repr(content)
-    url = url or "https://haste.clicksminuteper.net"
+    url = url or "https://hastebin.com"
     async with aiohttp.ClientSession() as session:
         try:
             async with session.post(url+"/documents", data=content) as response:
